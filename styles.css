@@ -1,0 +1,42 @@
+body {
+    background-color: #7286D3;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: #FFF2F2;
+    
+}
+
+.currency-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EA7E9;
+    padding-left: auto;
+    padding-right: auto;
+    border-radius: 6px;
+}
+
+.select-currency {
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.currencies {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #FFF2F2;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: fit-content;
+    
+
+}
+
