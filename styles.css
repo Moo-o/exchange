@@ -68,3 +68,37 @@ h1 {
     color: #7286D3;
     font-weight: bold;
 }
+
+.get-amount{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.get-button {
+    background-color: #FFF2F2;
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: #E5E0FF;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #7286D3;
+
+}
+
+.get-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EA7E9;
+    border-radius: 6px;
+    padding:8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+::placeholder {
+    color: #7286D3;
+}
