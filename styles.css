@@ -36,7 +36,35 @@ h1 {
     padding-top: 10px;
     padding-bottom: 10px;
     height: fit-content;
-    
+    font-weight: bolder;
+    color: #7286D3;
+    border-width: 0px;
 
 }
 
+.select-amount {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EA7E9;
+    border-radius: 6px;
+    padding:15px
+}
+
+.amount {
+    border-width:0px;
+    padding:3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 2px;
+    background-color: #FFF2F2;
+    color: #7286D3;
+    font-weight: bold;
+}
