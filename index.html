@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Currency Converter</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -14,21 +14,11 @@
     <div class="select-currency">
         <div class="currency-background">
 
-            <select name="currencies" id="currencies" class="currencies">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
+            <select name="fromCurrency" id="fromCurrency" class="currencies"></select>
 
             <h1>To</h1>
 
-            <select name="currencies" id="currencies" class="currencies">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
+            <select name="toCurrency" id="toCurrency" class="currencies"></select>
         </div>
     </div>
 
@@ -39,7 +29,7 @@
     </div>
 
     <div class="get-amount">
-        <div class = "get-background"> 
+        <div class="get-background">
             <button class="get-button">Get</button>
         </div>
     </div>
