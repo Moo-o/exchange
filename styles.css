@@ -102,3 +102,14 @@ h1 {
 ::placeholder {
     color: #7286D3;
 }
+
+select {
+    border-radius: 5px;
+    background-color: black;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+
+}

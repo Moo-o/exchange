@@ -34,3 +34,99 @@ document.addEventListener('DOMContentLoaded', function () {
         toCurrencySelect.appendChild(option);
     });
 });
+
+const getButtonClicked = async () => {
+    const fromDropdown = document.getElementById('fromCurrency');
+    // Get the selected index
+    const selectedFromIndex = fromDropdown.selectedIndex;
+    // Get the selected option
+    const selectedFromOption = fromDropdown.options[selectedFromIndex];
+    // Access the value and text of the selected option
+    const selectedFromValue = selectedFromOption.value;
+    const selectedFromText = selectedFromOption.text;
+
+
+    const toDropdown = document.getElementById('toCurrency');
+    // Get the selected index
+    const selectedToIndex = toDropdown.selectedIndex;
+    // Get the selected option
+    const selectedToOption = toDropdown.options[selectedToIndex];
+    // Access the value and text of the selected option
+    const selectedToValue = selectedToOption.value;
+    const selectedToText = selectedToOption.text;
+
+
+    console.log(selectedFromValue + ' To ' + selectedToValue);
+
+    const apiKey = '65d21c244c96c663c335dd54';
+
+    const baseCurrency = selectedFromValue;
+
+    const targetCurrency = selectedToValue;
+
+    const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/pair/${baseCurrency}/${targetCurrency}`;
+
+    var conversionRate = 0
+
+    
+
+    // fetch(apiUrl)
+    //     .then(response => response.json())
+    //     .then(data => {
+
+    //         if (data.result == 'success') {
+    //             conversionRate = data.conversion_rate;
+    //             console.log(conversionRate)
+
+    //         }
+    //         else {
+    //             console.log('Error in getting conversion rate')
+    //         }
+    //     })
+    //     .catch(error => {
+    //         // Handle network or other errors
+    //         console.error('Fetch error:', error);
+    //     });
+    
+    try {
+        // Use async/await to wait for the fetch to complete
+        const response = await fetch(apiUrl);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data.result === 'success') {
+            conversionRate = data.conversion_rate;
+            console.log(conversionRate);
+        };
+
+        const inputNumber = document.getElementById('amount')
+        const inputValue = inputNumber.value;
+        console.log(inputValue) 
+    
+        const resultDisplay = document.getElementById('resultDisplay');
+    
+        if ((inputValue<=0) || (inputValue==null)) {
+            resultDisplay.textContent = 'Please enter valid amount';
+        }
+    
+        else {
+            const resultingValue = inputValue * conversionRate;
+            console.log(inputValue + ' times ' + conversionRate + ' equals ' + resultingValue);
+            const roundedResultingValue = resultingValue.toFixed(2);
+            resultDisplay.textContent = roundedResultingValue;
+        }
+    }
+
+        catch (error) {
+        console.error('Fetch error:', error);
+        }
+
+    
+
+
+
+};
